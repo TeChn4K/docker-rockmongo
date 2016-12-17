@@ -25,8 +25,8 @@ Il est possible de passer un ou plusieurs serveurs auxquels Rockmongo pourra se 
 
 Exemple avec un seul serveur : 
 
-`docker run -p 80:80 -e "MONGO_NAME=localhost" -e "MONGO_HOST=127.0.0.1" docker-rockmongo`
+`docker run --name rockmongo -p 80:80 -e "MONGO_NAME=localhost" -e "MONGO_HOST=127.0.0.1" docker-rockmongo`
 
 Exemple avec plusieurs serveurs, séparées par des pipe (|) :
 
-`docker run -p 80:80 -e "MONGO_NAME=localhost|server2" -e "MONGO_HOST=127.0.0.1|192.168.1.100" docker-rockmongo`
+`docker run --name rockmongo -p 80:80 -e "MONGO_NAME=localhost|server2" -e "MONGO_HOST=127.0.0.1|192.168.1.100" docker-rockmongo`
